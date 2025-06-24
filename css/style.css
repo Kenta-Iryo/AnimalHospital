@@ -272,7 +272,6 @@ body {
 
 .about {
   background-color: rgba(13, 150, 160, 0.102);
-  background-color: red;
   padding: 64px 0 68px 0;
 }
 @media screen and (max-width: 767px) {
