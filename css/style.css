@@ -773,6 +773,7 @@ time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 1.5rem;
 }
 @media screen and (max-width: 767px) {
   .form__item {
@@ -801,22 +802,30 @@ time {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 40px;
-  background-color: #fff;
 }
 .form__input #name {
-  height: 50px;
+  height: 40px;
+  width: 100%;
+  padding-inline: 20px;
 }
 .form__input #email {
-  height: 50px;
+  height: 40px;
+  width: 100%;
+  padding-inline: 20px;
 }
+.form__input input {
+  background-color: #fff;
+}
+
 .form__textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 300px;
   background-color: #fff;
   margin-bottom: 53px;
+  padding: 20px;
+  height: 300px;
+  resize: vertical;
 }
 .form__textarea #message {
   height: 300px;
@@ -831,7 +840,7 @@ time {
   font-weight: 500;
   text-align: center;
   margin: 0 auto;
-  padding-top: 7px;
+  padding: 7px 0;
   letter-spacing: 2.7px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -840,6 +849,7 @@ time {
 .contact__button:hover {
   background-color: #fff;
   color: #0d96a0;
+  border: 1px solid #0d96a0;
 }
 @media screen and (max-width: 767px) {
   .contact__button {
