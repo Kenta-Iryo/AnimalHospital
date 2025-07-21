@@ -23,6 +23,7 @@ img {
   max-width: 940px;
   margin: 0 auto;
   padding: 0 30px;
+
   @media screen and (max-width: 767px) {
     padding: 0 20px;
   }
@@ -42,6 +43,7 @@ img {
   width: 25px;
   height: 25px;
   margin-top: 10px;
+  top: 50%;
 }
 
 .section-title::after {
@@ -51,10 +53,12 @@ img {
   width: 25px;
   height: 25px;
   margin-top: 10px;
+  top: 50%;
 }
 
 .title {
   padding: 0 19px;
+
   @media screen and (max-width: 767px) {
     margin: 0;
   }
@@ -62,6 +66,7 @@ img {
 
 .br-sp {
   display: none;
+
   @media screen and (max-width: 375px) {
     display: block;
   }
@@ -69,6 +74,7 @@ img {
 
 .sp {
   display: none;
+
   @media screen and (max-width: 374px) {
     display: block;
   }
@@ -94,6 +100,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media screen and (max-width: 900px) {
     padding-inline: 30px;
   }
@@ -106,6 +113,7 @@ img {
 .header__title {
   font-size: 1.8rem;
   transition: all 0.3s linear;
+
   &:hover {
     opacity: 0.5;
   }
@@ -135,6 +143,7 @@ img {
 .header__nav-lists {
   display: flex;
   gap: 10px;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -142,6 +151,7 @@ img {
 
 .header__nav-list {
   text-align: center;
+
   &:first-child {
     padding-left: 0;
   }
@@ -154,6 +164,7 @@ img {
   height: 50px;
   display: grid;
   place-items: center;
+
   &:hover {
     opacity: 0.5;
   }
@@ -167,8 +178,8 @@ img {
 
 .fv__img {
   width: 100%;
-  @media screen and (min-width: 767px) {
-  }
+
+  @media screen and (min-width: 767px) {}
 
   img {
     width: 100%;
@@ -179,20 +190,26 @@ img {
   position: absolute;
   background-color: rgba(255, 255, 255, 70.2%);
   left: 0;
-  bottom: 25%;
+  top: 56%;
+  transform: translateY(-50%);
   padding: 17px 35px 23px 99px;
+
   @media screen and (min-width: 768px) and (max-width: 940px) {
     padding: 17px 30px 23px 30px;
   }
+
   @media screen and (max-width: 767px) {
-    bottom: 2px;
-    padding: 18px 23px 0 22px;
+    top: auto;
+    transform: translateY(0);
+    bottom: -11px;
+    padding: 18px 23px 17px 22px;
   }
 }
 
 .fv__text-main {
   font-size: 2.5rem;
   padding-bottom: 14px;
+
   @media screen and (max-width: 767px) {
     font-size: 2rem;
     padding-bottom: 4px;
@@ -203,6 +220,7 @@ img {
   color: color.$sub-color;
   font-size: 4rem;
   line-height: calc(60 / 40);
+
   @media screen and (max-width: 767px) {
     font-size: 3rem;
     line-height: calc(40 / 30);
@@ -214,6 +232,7 @@ img {
 .introduction {
   padding: 64px 0;
   text-align: center;
+
   @media screen and (max-width: 767px) {
     padding: 54px 0 39px;
   }
@@ -223,6 +242,7 @@ img {
   color: color.$sub-color;
   margin-bottom: 18px;
   font-size: 3rem;
+
   @media screen and (max-width: 767px) {
     font-size: 2.5rem;
     line-height: 1.4;
@@ -234,6 +254,7 @@ img {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(33 / 18);
+
   @media screen and (max-width: 767px) {
     line-height: 1.875;
     font-size: 1.6rem;
@@ -247,6 +268,7 @@ img {
   right: 7px;
   width: 83px;
   height: 77px;
+
   @media screen and (max-width: 767px) {
     width: 68px;
     height: 62px;
@@ -259,6 +281,7 @@ img {
 .about {
   background-color: rgba(13, 150, 160, 0.102);
   padding: 59px 0 68px 0;
+
   @media screen and (max-width: 767px) {
     padding: 56px 0 35px 0;
   }
@@ -266,6 +289,7 @@ img {
 
 .about__title {
   margin-bottom: 50px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 42px;
   }
@@ -275,6 +299,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 48px;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     gap: 43px;
@@ -293,14 +318,14 @@ img {
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
+
     @media screen and (max-width: 767px) {
       flex-direction: column;
     }
   }
 
   &:nth-child(even) {
-    @media screen and (max-width: 767px) {
-    }
+    @media screen and (max-width: 767px) {}
   }
 }
 
@@ -311,11 +336,13 @@ img {
 .about-item__title {
   margin-bottom: 19px;
   font-size: 2.2rem;
+
   @media screen and (max-width: 767px) {
     font-size: 2rem;
     text-align: center;
     margin: 26px 0 8px;
   }
+
   @media screen and (max-width: 320px) {
     font-size: 1.7rem;
   }
@@ -325,6 +352,7 @@ img {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(33 / 18);
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
   }
@@ -336,6 +364,7 @@ img {
 
 .about__img {
   width: 50%;
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -348,6 +377,7 @@ img {
 // サーヴィス
 .service {
   padding: 63px 0 59px 0;
+
   @media screen and (max-width: 767px) {
     padding: 50px 0 39px 0;
   }
@@ -355,6 +385,7 @@ img {
 
 .service__title {
   margin-bottom: 53px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 44px;
   }
@@ -364,6 +395,7 @@ img {
   display: flex;
   margin: 0 auto;
   gap: 5.69%;
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
     row-gap: 39px;
@@ -372,6 +404,7 @@ img {
 
 .service-item {
   width: 29.54%;
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -379,6 +412,7 @@ img {
 
 .service-item__img {
   margin-bottom: 13px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 13px;
   }
@@ -390,6 +424,7 @@ img {
 
 .service-item__body {
   text-align: center;
+
   @media screen and (max-width: 767px) {
     margin-top: 30px;
   }
@@ -398,8 +433,8 @@ img {
 .service-item__title {
   font-size: 2rem;
   margin-bottom: 10px;
-  @media screen and (max-width: 767px) {
-  }
+
+  @media screen and (max-width: 767px) {}
 }
 
 .service-item__text {
@@ -407,6 +442,7 @@ img {
   line-height: calc(30 / 17);
   text-align: left;
   font-weight: 500;
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
   }
@@ -416,6 +452,7 @@ img {
 .news {
   background-color: rgba(13, 150, 160, 0.102);
   padding: 58px 0 68px 0;
+
   @media screen and (max-width: 767px) {
     padding: 46px 0 50px 0;
   }
@@ -425,17 +462,16 @@ img {
   margin-bottom: 46px;
 }
 
-.news__items {
-}
+.news__items {}
 
 .news__item {
   border-bottom: 1px solid #707070;
+
   &:first-child {
     border-top: 1px solid #707070;
   }
 
-  &:last-child {
-  }
+  &:last-child {}
 }
 
 .news__item a {
@@ -459,6 +495,7 @@ img {
 
 time {
   font-size: 1.7rem;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 2px;
     padding-left: 0;
@@ -470,6 +507,7 @@ time {
   font-size: 2rem;
   padding-left: 25px;
   width: 209px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 5px;
     padding-left: 0;
@@ -481,6 +519,7 @@ time {
   font-size: 1.7rem;
   font-weight: 500;
   padding-left: 25px;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     font-size: 1.6rem;
@@ -492,6 +531,7 @@ time {
 // アクセス
 .access {
   padding: 63px 0 70px 0;
+
   @media screen and (max-width: 767px) {
     padding: 42px 0 50px;
   }
@@ -501,12 +541,12 @@ time {
   margin-bottom: 46px;
 }
 
-.access__items {
-}
+.access__items {}
 
 .access__item {
   display: flex;
   gap: 5.2%;
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
@@ -514,6 +554,7 @@ time {
 
 .access__map {
   flex: 1;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     margin-bottom: 24px;
@@ -528,6 +569,7 @@ time {
 
 .access__body {
   width: 44.77%;
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -536,6 +578,7 @@ time {
 .access__item-title {
   margin-bottom: 15px;
   font-size: 2.2rem;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 12px;
   }
@@ -545,6 +588,7 @@ time {
   margin-bottom: 18px;
   font-size: 1.8rem;
   font-weight: 500;
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
     margin-bottom: 11px;
@@ -555,6 +599,7 @@ time {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 7px;
   }
@@ -563,6 +608,7 @@ time {
 .access__item-tell {
   font-size: 1.8rem;
   font-weight: 500;
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
   }
@@ -571,6 +617,7 @@ time {
 .access__item-number {
   color: color.$sub-color;
   font-size: 2.5rem;
+
   @media screen and (max-width: 767px) {
     :hover {
       opacity: 0.5;
@@ -590,9 +637,11 @@ time {
   display: flex;
   margin-bottom: 27px;
   transition: all 0.3s linear;
+
   &:hover {
     opacity: 0.5;
   }
+
   @media screen and (max-width: 767px) {
     margin-bottom: 14px;
   }
@@ -601,6 +650,7 @@ time {
 .access__item-mail {
   font-size: 1.8rem;
   font-weight: 500;
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
   }
@@ -609,6 +659,7 @@ time {
 .access__item-adress {
   font-size: 1.8rem;
   font-weight: 500;
+
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
   }
@@ -621,6 +672,7 @@ time {
   border-bottom: 1px solid #707070;
   font-weight: 500;
   font-size: 1.8rem;
+
   @media screen and (max-width: 767px) {
     padding: 12px 0;
     font-size: 1.6rem;
@@ -628,16 +680,15 @@ time {
   }
 }
 
-.access__item-time {
-}
+.access__item-time {}
 
-.access__item-day {
-}
+.access__item-day {}
 
 // お問い合わせ
 .contact {
   background-color: rgba(13, 150, 160, 0.102);
   padding: 64px 0 78px;
+
   @media screen and (max-width: 767px) {
     padding: 44px 0 50px;
   }
@@ -645,6 +696,7 @@ time {
 
 .contact__title {
   margin-bottom: 25px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 43px;
   }
@@ -656,6 +708,7 @@ time {
   font-weight: 500;
   line-height: calc(30 / 17);
   text-align: center;
+
   @media screen and (max-width: 767px) {
     text-align: left;
     font-size: 1.6rem;
@@ -668,6 +721,7 @@ time {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
   @media screen and (max-width: 767px) {
     gap: 24px;
   }
@@ -677,6 +731,7 @@ time {
   width: 100%;
   display: flex;
   font-size: 1.5rem;
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
@@ -686,6 +741,7 @@ time {
   width: 169px;
   font-size: 20px;
   padding-top: 7px;
+
   @media screen and (max-width: 767px) {
     font-size: 1.8rem;
     font-weight: bold;
@@ -696,16 +752,20 @@ time {
 
 .form__input {
   flex: 1;
+
   #name {
     padding: 0 20px;
+
     @media screen and (max-width: 767px) {
       height: 50px;
       width: 100%;
       padding-inline: 20px;
     }
   }
+
   #email {
     padding: 0 20px;
+
     @media screen and (max-width: 767px) {
       height: 50px;
       width: 100%;
@@ -722,17 +782,21 @@ time {
 
 .form__textarea {
   flex: 1;
+  line-height: 1.65;
+
   textarea {
     width: 100%;
     height: 300px;
     background-color: #fff;
     padding: 20px;
     resize: vertical;
+
   }
 }
 
 .contact__button {
   text-align: center;
+
   input {
     width: 200px;
     height: 50px;
@@ -742,15 +806,17 @@ time {
     border-radius: 10px;
     font-weight: 500;
     margin-top: 49px;
-    padding-left: 4px;
-    letter-spacing: 0.1em;
+    padding-left: 13px;
+    letter-spacing: 0.4em;
     transition: 0.3s;
     cursor: pointer;
     border: 1px solid #0d96a0;
+
     &:hover {
       background-color: #fff;
       color: color.$sub-color;
     }
+
     @media screen and (max-width: 767px) {
       font-size: 2rem;
       width: 100%;
@@ -766,6 +832,7 @@ time {
   background-color: color.$main-color;
   padding: 64px 0 72px 0;
   text-align: center;
+
   @media screen and (max-width: 767px) {
     padding: 45px 0 50px;
   }
@@ -780,6 +847,7 @@ time {
   font-size: 2rem;
   gap: 4px;
   border-bottom: 1px solid #fff;
+
   @media screen and (max-width: 767px) {
     max-width: 335px;
     font-size: 1.8rem;
@@ -791,17 +859,19 @@ time {
 
 .footer__nav-item {
   font-weight: 500;
-  @media screen and (max-width: 767px) {
-  }
+
+  @media screen and (max-width: 767px) {}
 }
 
 .footer__nav-link {
   padding: 5px;
   transition: all 0.3s linear;
   display: block;
+
   &:hover {
     opacity: 0.5;
   }
+
   @media screen and (max-width: 767px) {
     padding: 0 5px;
   }
@@ -809,7 +879,8 @@ time {
 
 .footer__copyright {
   font-size: 2rem;
-  padding: 30px 0 4px 0;
+  padding-top: 28px;
+
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -822,26 +893,34 @@ time {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 12px;
+
   @media screen and (max-width: 767px) {
     padding-top: 26px;
   }
 }
 
 .sns__list {
-  padding: 5px;
+  // padding: 5px;
   transition: all 0.3s linear;
+
   &:hover {
     opacity: 0.5;
+  }
+
+  a {
+    padding: 5px;
   }
 }
 
 .ib {
   display: inline-block;
-  @media screen and (max-width: 767px) {
-    // display: none;
-  }
-  @media screen and (min-width: 768px) {
-    display: inline-block;
-  }
+
+  // @media screen and (max-width: 767px) {
+  //   // display: none;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   display: inline-block;
+  // }
 }
