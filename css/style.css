@@ -44,7 +44,7 @@ img {
   display: inline-block;
   width: 25px;
   height: 25px;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .section-title::after {
@@ -53,7 +53,7 @@ img {
   display: inline-block;
   width: 25px;
   height: 25px;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .title {
@@ -912,6 +912,7 @@ time {
 @media screen and (max-width: 767px) {
   .contact__button input {
     font-size: 2rem;
+    max-width: 335px;
     width: 100%;
     height: 41px;
     padding-bottom: 3px;
