@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  scroll-padding: 50px;
+}
+
 body {
   color: #505050;
   font-family: "Noto Sans JP", sans-serif;
@@ -65,24 +69,24 @@ img {
   }
 }
 
-.br-sp {
-  display: none;
-}
-@media screen and (max-width: 375px) {
-  .br-sp {
-    display: block;
-  }
-}
-
 .sp {
   display: none;
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 767px) {
   .sp {
-    display: block;
+    display: inline-block;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .pc-ib {
+    display: inline;
+  }
+}
+
+.br-sp {
+  display: inline-block;
+}
 .header {
   position: fixed;
   background-color: #fff;
@@ -124,6 +128,7 @@ img {
   font-size: 1.8rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  line-height: 1.8333333333;
 }
 .header__title:hover {
   opacity: 0.5;
@@ -179,6 +184,7 @@ img {
   height: 50px;
   display: grid;
   place-items: center;
+  line-height: 2.3571428571;
 }
 .header__nav-link:hover {
   opacity: 0.5;
@@ -240,7 +246,6 @@ img {
   .fv__text-sub {
     font-size: 3rem;
     line-height: 1.3333333333;
-    padding-bottom: 8px;
   }
 }
 
@@ -250,7 +255,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .introduction {
-    padding: 54px 0 39px;
+    padding: 50px 0 39px;
   }
 }
 
@@ -302,7 +307,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .about {
-    padding: 56px 0 35px 0;
+    padding: 54px 0 35px 0;
   }
 }
 
@@ -375,6 +380,7 @@ img {
 .about-item__title {
   margin-bottom: 19px;
   font-size: 2.2rem;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .about-item__title {
@@ -485,6 +491,7 @@ img {
 .service-item__title {
   font-size: 2rem;
   margin-bottom: 10px;
+  line-height: 1.25;
 }
 .service-item__text {
   font-size: 1.7rem;
@@ -549,6 +556,7 @@ img {
 
 time {
   font-size: 1.7rem;
+  line-height: 1.4705882353;
 }
 @media screen and (max-width: 767px) {
   time {
@@ -562,6 +570,7 @@ time {
   font-size: 2rem;
   padding-left: 25px;
   width: 209px;
+  line-height: 1.25;
 }
 @media screen and (max-width: 767px) {
   .news__item-title {
@@ -577,6 +586,7 @@ time {
   font-size: 1.7rem;
   font-weight: 500;
   padding-left: 25px;
+  line-height: 1.7647058824;
 }
 @media screen and (max-width: 767px) {
   .news__item-text {
@@ -624,7 +634,7 @@ time {
   .access__map {
     width: 100%;
     margin-bottom: 24px;
-    aspect-ratio: 440/300;
+    aspect-ratio: 335/222;
   }
 }
 .access__map iframe {
@@ -644,10 +654,11 @@ time {
 .access__item-title {
   margin-bottom: 15px;
   font-size: 2.2rem;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .access__item-title {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 }
 
@@ -655,6 +666,7 @@ time {
   margin-bottom: 18px;
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .access__item-address {
@@ -681,6 +693,7 @@ time {
 .access__item-tell {
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .access__item-tell {
@@ -691,13 +704,16 @@ time {
 .access__item-number {
   color: #0d96a0;
   font-size: 2.5rem;
+  line-height: 1.6;
 }
 @media screen and (max-width: 767px) {
+  .access__item-number {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
   .access__item-number :hover {
     opacity: 0.5;
     cursor: pointer;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
   }
 }
 
@@ -712,34 +728,33 @@ time {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 27px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.access__item-mailadress:hover {
-  opacity: 0.5;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
   .access__item-mailadress {
     margin-bottom: 14px;
   }
 }
-
-.access__item-mail {
+.access__item-mailadress p {
   font-size: 1.8rem;
   font-weight: 500;
 }
 @media screen and (max-width: 767px) {
-  .access__item-mail {
+  .access__item-mailadress p {
     font-size: 1.6rem;
   }
 }
-
-.access__item-adress {
+.access__item-mailadress a {
   font-size: 1.8rem;
   font-weight: 500;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.access__item-mailadress a:hover {
+  opacity: 0.5;
 }
 @media screen and (max-width: 767px) {
-  .access__item-adress {
+  .access__item-mailadress a {
     font-size: 1.6rem;
   }
 }
@@ -831,6 +846,7 @@ time {
   width: 169px;
   font-size: 20px;
   padding-top: 7px;
+  line-height: 1.8333333333;
 }
 @media screen and (max-width: 767px) {
   .form__label {
@@ -845,6 +861,8 @@ time {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 .form__input #name {
   padding: 0 20px;
@@ -870,6 +888,7 @@ time {
   width: 100%;
   height: 40px;
   background-color: #fff;
+  line-height: 1.2;
 }
 
 .form__textarea {
@@ -879,15 +898,19 @@ time {
   line-height: 1.65;
 }
 .form__textarea textarea {
+  display: block;
   width: 100%;
   min-height: 300px;
   background-color: #fff;
   padding: 20px;
   resize: vertical;
+  line-height: 1.2;
 }
 
 .contact__button {
   text-align: center;
+  margin-top: 49px;
+  line-height: 1.32;
 }
 .contact__button input {
   width: 200px;
@@ -897,7 +920,6 @@ time {
   font-size: 2.5rem;
   border-radius: 10px;
   font-weight: 500;
-  margin-top: 49px;
   padding-left: 13px;
   letter-spacing: 0.4em;
   -webkit-transition: 0.3s;
@@ -964,6 +986,7 @@ time {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   display: block;
+  line-height: 1.65;
 }
 .footer__nav-link:hover {
   opacity: 0.5;
@@ -977,12 +1000,10 @@ time {
 .footer__copyright {
   font-size: 2rem;
   padding-top: 28px;
+  line-height: 2.0625;
 }
 @media screen and (max-width: 767px) {
   .footer__copyright {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1001,7 +1022,7 @@ time {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12px;
+  gap: 2px;
 }
 @media screen and (max-width: 767px) {
   .footer__sns {
@@ -1019,8 +1040,4 @@ time {
 .sns__list a {
   display: block;
   padding: 5px;
-}
-
-.ib {
-  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  scroll-padding: 50px;
+}
+
 body {
   color: color.$main-color;
   font-family: "Noto Sans JP", sans-serif;
@@ -62,20 +66,24 @@ img {
   }
 }
 
-.br-sp {
-  display: none;
-
-  @media screen and (max-width: 375px) {
-    display: block;
-  }
-}
-
 .sp {
   display: none;
 
-  @media screen and (max-width: 374px) {
-    display: block;
+  @media screen and (max-width: 767px) {
+    display: inline-block;
   }
+}
+
+.pc-ib {
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+}
+
+.br-sp {
+  display: inline-block;
+
+  @media screen and (max-width: 767px) {}
 }
 
 // ヘッダー
@@ -111,6 +119,7 @@ img {
 .header__title {
   font-size: 1.8rem;
   transition: all 0.3s linear;
+  line-height: calc(33/18);
 
   &:hover {
     opacity: 0.5;
@@ -162,6 +171,7 @@ img {
   height: 50px;
   display: grid;
   place-items: center;
+  line-height: calc(33/14);
 
   &:hover {
     opacity: 0.5;
@@ -222,7 +232,7 @@ img {
   @media screen and (max-width: 767px) {
     font-size: 3rem;
     line-height: calc(40 / 30);
-    padding-bottom: 8px;
+    // padding-bottom: 8px;
   }
 }
 
@@ -232,7 +242,7 @@ img {
   text-align: center;
 
   @media screen and (max-width: 767px) {
-    padding: 54px 0 39px;
+    padding: 50px 0 39px;
   }
 }
 
@@ -281,7 +291,7 @@ img {
   padding: 59px 0 68px 0;
 
   @media screen and (max-width: 767px) {
-    padding: 56px 0 35px 0;
+    padding: 54px 0 35px 0;
   }
 }
 
@@ -334,6 +344,7 @@ img {
 .about-item__title {
   margin-bottom: 19px;
   font-size: 2.2rem;
+  line-height: calc(33/22);
 
   @media screen and (max-width: 767px) {
     font-size: 2rem;
@@ -431,6 +442,7 @@ img {
 .service-item__title {
   font-size: 2rem;
   margin-bottom: 10px;
+  line-height: calc(25/20);
 
   @media screen and (max-width: 767px) {}
 }
@@ -443,6 +455,7 @@ img {
 
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
+    // text-align: center;
   }
 }
 
@@ -493,6 +506,7 @@ img {
 
 time {
   font-size: 1.7rem;
+  line-height: calc(25/17);
 
   @media screen and (max-width: 767px) {
     margin-bottom: 2px;
@@ -505,6 +519,7 @@ time {
   font-size: 2rem;
   padding-left: 25px;
   width: 209px;
+  line-height: calc(25/20);
 
   @media screen and (max-width: 767px) {
     margin-bottom: 5px;
@@ -517,6 +532,7 @@ time {
   font-size: 1.7rem;
   font-weight: 500;
   padding-left: 25px;
+  line-height: calc(30/17);
 
   @media screen and (max-width: 767px) {
     width: 100%;
@@ -556,7 +572,7 @@ time {
   @media screen and (max-width: 767px) {
     width: 100%;
     margin-bottom: 24px;
-    aspect-ratio: 440 / 300;
+    aspect-ratio: 335 / 222;
   }
 
   iframe {
@@ -576,9 +592,10 @@ time {
 .access__item-title {
   margin-bottom: 15px;
   font-size: 2.2rem;
+  line-height: calc(33/22);
 
   @media screen and (max-width: 767px) {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 }
 
@@ -586,6 +603,7 @@ time {
   margin-bottom: 18px;
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: calc(27/18);
 
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
@@ -606,6 +624,7 @@ time {
 .access__item-tell {
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: calc(27/18);
 
   @media screen and (max-width: 767px) {
     font-size: 1.6rem;
@@ -615,12 +634,14 @@ time {
 .access__item-number {
   color: color.$sub-color;
   font-size: 2.5rem;
+  line-height: calc(40/25);
 
   @media screen and (max-width: 767px) {
+    transition: all 0.3s linear;
+
     :hover {
       opacity: 0.5;
       cursor: pointer;
-      transition: all 0.3s linear;
     }
   }
 }
@@ -634,34 +655,36 @@ time {
 .access__item-mailadress {
   display: flex;
   margin-bottom: 27px;
-  transition: all 0.3s linear;
-
-  &:hover {
-    opacity: 0.5;
-  }
+  line-height: calc(27/18);
 
   @media screen and (max-width: 767px) {
     margin-bottom: 14px;
   }
-}
 
-.access__item-mail {
-  font-size: 1.8rem;
-  font-weight: 500;
+  p {
+    font-size: 1.8rem;
+    font-weight: 500;
 
-  @media screen and (max-width: 767px) {
-    font-size: 1.6rem;
+    @media screen and (max-width: 767px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s linear;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.6rem;
+    }
   }
 }
 
-.access__item-adress {
-  font-size: 1.8rem;
-  font-weight: 500;
-
-  @media screen and (max-width: 767px) {
-    font-size: 1.6rem;
-  }
-}
 
 .access__closed-time {
   padding: 13px 2px 14px 4px;
@@ -739,6 +762,7 @@ time {
   width: 169px;
   font-size: 20px;
   padding-top: 7px;
+  line-height: calc(33/18);
 
   @media screen and (max-width: 767px) {
     font-size: 1.8rem;
@@ -750,6 +774,8 @@ time {
 
 .form__input {
   flex: 1;
+  font-size: 1.6rem;
+  font-weight: 500;
 
   #name {
     padding: 0 20px;
@@ -775,6 +801,7 @@ time {
     width: 100%;
     height: 40px;
     background-color: #fff;
+    line-height: 1.2;
   }
 }
 
@@ -783,16 +810,21 @@ time {
   line-height: 1.65;
 
   textarea {
+    display: block;
     width: 100%;
     min-height: 300px;
     background-color: #fff;
     padding: 20px;
     resize: vertical;
+    // line-height: calc(33/18);
+    line-height: 1.2;
   }
 }
 
 .contact__button {
   text-align: center;
+  margin-top: 49px;
+  line-height: calc(33/25);
 
   input {
     width: 200px;
@@ -802,7 +834,6 @@ time {
     font-size: 2.5rem;
     border-radius: 10px;
     font-weight: 500;
-    margin-top: 49px;
     padding-left: 13px;
     letter-spacing: 0.4em;
     transition: 0.3s;
@@ -865,6 +896,7 @@ time {
   padding: 5px;
   transition: all 0.3s linear;
   display: block;
+  line-height: calc(33/20);
 
   &:hover {
     opacity: 0.5;
@@ -878,9 +910,10 @@ time {
 .footer__copyright {
   font-size: 2rem;
   padding-top: 28px;
+  line-height: calc(33/16);
 
   @media screen and (max-width: 767px) {
-    display: flex;
+    // display: flex;
     justify-content: center;
     font-size: 1.6rem;
     padding-top: 18px;
@@ -891,7 +924,7 @@ time {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
 
   @media screen and (max-width: 767px) {
     padding-top: 26px;
@@ -910,8 +943,4 @@ time {
     display: block;
     padding: 5px;
   }
-}
-
-.ib {
-  display: inline-block;
 }
