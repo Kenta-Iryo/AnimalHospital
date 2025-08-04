@@ -78,6 +78,9 @@ img {
   }
 }
 
+.pc-ib {
+  display: inline-block;
+}
 @media screen and (max-width: 767px) {
   .pc-ib {
     display: inline;
@@ -87,6 +90,12 @@ img {
 .br-sp {
   display: inline-block;
 }
+@media screen and (max-width: 767px) {
+  .br-sp1 {
+    display: block;
+  }
+}
+
 .header {
   position: fixed;
   background-color: #fff;
