@@ -72,35 +72,21 @@ img {
   }
 }
 
-.sp {
-  display: none;
-}
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .sp {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pc-ib {
     display: inline-block;
-  }
-}
-
-.pc-ib {
-  display: inline-block;
-}
-@media screen and (max-width: 767px) {
-  .pc-ib {
-    display: inline;
-  }
-}
-@media screen and (max-width: 374px) {
-  .pc-ib {
-    font-size: 1.4rem;
-  }
-}
-
-.br-sp {
-  display: inline-block;
-}
-@media screen and (max-width: 767px) {
-  .br-sp1 {
-    display: block;
   }
 }
 
@@ -919,13 +905,14 @@ time {
       -ms-flex: 1;
           flex: 1;
   line-height: 1.65;
+  font-weight: 500;
 }
 .form__textarea textarea {
   display: block;
   width: 100%;
   min-height: 300px;
   background-color: #fff;
-  padding: 0 20px;
+  padding: 20px;
   resize: vertical;
   line-height: 1.6;
 }

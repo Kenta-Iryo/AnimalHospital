@@ -70,36 +70,20 @@ img {
 }
 
 .sp {
-  display: none;
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
 
-  @media screen and (max-width: 767px) {
-    display: inline-block;
+.pc {
+  @media only screen and (max-width: 767px) {
+    display: none !important;
   }
 }
 
 .pc-ib {
-  display: inline-block;
-
-  @media screen and (max-width: 767px) {
-    display: inline;
-  }
-
-  @media screen and (max-width: 374px) {
-    font-size: 1.4rem;
-  }
-}
-
-.br-sp {
-  display: inline-block;
-
-  @media screen and (max-width: 767px) {
-    // display: block;
-  }
-}
-
-.br-sp1 {
-  @media screen and (max-width: 767px) {
-    display: block;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
   }
 }
 
@@ -830,13 +814,14 @@ time {
 .form__textarea {
   flex: 1;
   line-height: 1.65;
+  font-weight: 500;
 
   textarea {
     display: block;
     width: 100%;
     min-height: 300px;
     background-color: #fff;
-    padding: 0 20px;
+    padding: 20px;
     resize: vertical;
     // line-height: calc(33/18);
     line-height: 1.6;
