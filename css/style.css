@@ -2,8 +2,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   word-break: break-all;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 :root {
@@ -408,7 +406,7 @@ img {
     margin: 26px 0 10px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 374px) {
   .about-item__title {
     font-size: 1.7rem;
   }
@@ -424,7 +422,7 @@ img {
     font-size: 1.6rem;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 374px) {
   .about-item__text {
     font-size: 1.4rem;
   }
@@ -731,6 +729,10 @@ time {
   font-size: 2.5rem;
   line-height: 1.6;
 }
+.access__item-number a {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
 @media screen and (max-width: 767px) {
   .access__item-number :hover {
     opacity: 0.5;
@@ -923,7 +925,7 @@ time {
   width: 100%;
   min-height: 300px;
   background-color: #fff;
-  padding: 20px;
+  padding: 0 20px;
   resize: vertical;
   line-height: 1.6;
 }
@@ -1030,6 +1032,11 @@ time {
             justify-content: center;
     font-size: 1.6rem;
     padding-top: 17px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .footer__copyright {
+    font-size: 1.4rem;
   }
 }
 
