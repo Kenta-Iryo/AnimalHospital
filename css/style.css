@@ -90,6 +90,10 @@ img {
   }
 }
 
+.ib {
+  display: inline-block;
+}
+
 .header {
   position: fixed;
   background-color: #fff;
@@ -904,6 +908,7 @@ time {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.6rem;
   line-height: 1.65;
   font-weight: 500;
 }
